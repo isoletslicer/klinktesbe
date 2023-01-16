@@ -1,0 +1,12 @@
+[
+    {
+        "name": "baju merah",
+        "price": 100000,
+        "stock": 999999
+    },
+    {
+        "name": "celana biru",
+        "price": 100000,
+        "stock": 999999
+    }
+]
