@@ -1,6 +1,5 @@
 const redis = require('../config/connectRedis');
 const { Product } = require('../models');
-// const { User } = require('../models');
 const { sequelize, Sequelize } = require('../models');
 
 
@@ -41,6 +40,11 @@ class ProductController {
             }
 
             const addedProduct = await Product.create({ name, price, stock });
+            const findProduct = await Product.findOne({ where: { name } });
+            // Check if exist
+            if (findProduct) {
+                throw { name: `product_already` };
+            }
 
             // update the key
             let redisKey = 'klink_test/products';

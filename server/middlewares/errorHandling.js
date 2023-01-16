@@ -19,8 +19,8 @@ function errorHandler(error, req, res, next) {
     res.status(400).json({ message: errorList });
   }
 
-  else if (error.name === 'Email must be unique') {
-    res.status(400).json({ message: 'Email must be unique. Try other one' });
+  else if (error.name === 'username must be unique') {
+    res.status(400).json({ message: 'username must be unique. Try other one' });
   }
   else if (error.name === 'incomplete_add_master_product') {
     res.status(400).json({ message: 'Failed to add item, please fill completely' });
@@ -30,9 +30,12 @@ function errorHandler(error, req, res, next) {
     res.status(400).json({ message: `Sorry, Stock not enough to decrease ` });
   }
 
+  else if (error.name === `product_already`) {
+    res.status(400).json({ message: `Sorry, product already existed, Try another one ` });
+  }
 
-  else if (error.name === `invalid email/password`) {
-    res.status(401).json({ message: `error invalid username or email or password` });
+  else if (error.name === `invalid username/password`) {
+    res.status(401).json({ message: `error invalid username or password` });
   }
 
   else if (error.name === `Unauthorized Activity`) {

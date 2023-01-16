@@ -1,7 +1,6 @@
 const { User } = require('../models');
 const { comparePassword } = require('../helpers/bcrypt-password');
 const { createToken } = require('../helpers/json-web-token');
-// const { sequelize, Sequelize } = require('../models');
 
 class UserController {
     static async registerMethod(req, res, next) {

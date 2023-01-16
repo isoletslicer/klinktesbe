@@ -34,15 +34,7 @@ _Response (400 - Bad Request)_
 
 ```json
 {
-  "message": "Email cannot be null"
-}
-OR
-{
-  "message": "Email cannot be empty"
-}
-OR
-{
-  "message": "Email value should be email format (using @)"
+  "message":"Username must be unique"
 }
 OR
 {
@@ -85,7 +77,7 @@ _Response (401 - invalid email/password)_
 
 ```json
 {
-  "message": "error invalid username  or password"
+  "message": "error invalid username or password"
 }
 ```
 
