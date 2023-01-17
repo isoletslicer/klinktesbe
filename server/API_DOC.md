@@ -26,7 +26,7 @@ _Response (201 - Created)_
 
 ```json
 {
-  "message": "user with email <email> has been created"
+  "message": "user with username <username> has been created"
 }
 ```
 
